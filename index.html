@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <Title>Temperature Conversion</Title>
+    <!--Google Font-->
+    <Link Rel="Preconnect" Href="Https://Fonts.Gstatic.Com">
+    <Link Href="Https://Fonts.Googleapis.Com/Css2?Family=Roboto+Mono:wght@500&Display=Swap" Rel="Stylesheet">
+    <!--Stylesheet-->
+    <Link Rel="Stylesheet" Href="Style.Css">
+</Head>
+<Body>
+    <Div Class="Wrapper">
+        <Div Class="Container">
+            <Label For="Celsius">Celsius</Label>
+            <Input type="Number" id="Celsius">
+        </Div>
+        <Div Class="Container">
+            <!-- oninput= "CelToFar()" -->
+
+            <Label For="Fahrenheit">Fahrenheit</Label>
+            <Input type="Number" id="Fahrenheit">
+        </Div>
+        
+       </Div>
+        <div> 
+            <button class="btn" onclick="CelToFar()">Convert</button>
+        </div>
+</Body>
+<script>
+let Celsius = document.getElementById("Celsius");
+let Fahrenheit = document.getElementById("Fahrenheit");
+
+function CelToFar(){
+    let Output = ( parseFloat(Celsius.value) * 9/5 ) + 32;
+    Fahrenheit.value = parseFloat(Output.toFixed(2));
+}
+
+function FarToCel(){
+    let Output = ( parseFloat(Fahrenheit.value) - 32) * 5/9;
+    Celsius.value = parseFloat( Output.toFixed(2));
+    Console.Log(Output);
+}
+</script>
+</Html>
